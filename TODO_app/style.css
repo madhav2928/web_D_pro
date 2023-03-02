@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    background-color: hsl(235,21%, 11%);
+
+}
+
+.background_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 350px;
+    z-index: -1;
+}
+
+.background_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+
+
+.main_container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0px 30px;
+    margin-top: 100px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.title {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 8px;
+}
+
+
+.new_todo {
+    background-color: hsl(235,24%, 19%);
+    height: 70px;
+    margin-top: 50px;
+    border-radius: 6px;
+    display: flex;
+    box-shadow: 0px 2px 30px 0px rgba(0,0,0,0.4);
+}
+
+.check {
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new_todo_input .add_todo_button:before {
+    content: "Add";
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    color: hsl(240, 41%, 20%);
+    letter-spacing: 1px;
+    width: 40px;
+    height: 30px;
+    background-color: hsl(239, 83%, 36%);
+    border-radius: 40%;
+    position: absolute;
+    right: 50px;
+    top: 100%;
+    transform: translateY(-50%);
+  }
+
+.new_todo_input .add_todo_button {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    margin-right: 0px;
+    z-index: 0;
+  }
+  
+
+
+.check_mark {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid hsl(237, 14%, 26%);
+    cursor: pointer;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.check_mark:hover {
+    background: linear-gradient(135deg, #0116FB 0%, #060663 100%);
+}
+
+.new_todo_input {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+
+}
+
+.new_todo_input form {
+    flex-grow: 1;
+}
+
+.new_todo_input input {
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 18px;
+    background-color: transparent;
+    font-family: 'Josefin Sans', sans-serif;
+    border: none;
+    outline: none;
+    color: hsl(234, 39% , 85%);
+    
+}
+
+
+.new_todo_input input::placeholder {
+    color: hsl(233, 14%, 35%);
+    font-size: 16px;
+}
+
+
+
+.todo_item {
+    width: 100%;
+    display: flex;
+    height: 70px;
+    background-color: hsl(235,24%, 19%);
+    border-bottom: 1px solid hsl(237, 14%, 26%);
+    color: hsl(234, 39% , 85%);
+    font-size: 18px;
+    transition: all 0.25s ease;
+    display: flex;
+    transition-property: box-shadow, transform, border-color;
+    cursor: pointer;
+}
+
+.todo_item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0px 7px 0px hsl(235, 21%, 11%);
+    border-color: hsl(235,24%, 19%);
+}
+
+.todo_text {
+    display: flex;
+    align-items: center;
+}
+
+.todo_items_list {
+    margin-top: 30px;
+    background-color: hsl(235,24%, 19%);
+    border-radius: 6px;
+    /* to hide the overflowed border of each item */
+    overflow: hidden;
+    /*To make it look like popping out of the screen we need to use box shadow*/
+    box-shadow: 0px 2px 30px 0px rgba(0,0,0,0.4);
+}
+
+
+
+.todo_info {
+    height: 70px;
+    width: 100%;
+    color: hsl(233, 14%, 35%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+}
+
+.items_statuses {
+    display: flex;
+    justify-content: center;
+}
+
+.items_statuses span {
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+.items_statuses span:hover, .items_statuses span.active, .items_clear:hover {
+    color: hsl(220, 98%, 61%);
+}
+
+
+.items_clear {
+    cursor: pointer;
+    text-align: end;
+}
+
+.delete_todo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid hsl(237, 14%, 26%);
+    background-color: hsl(237, 14%, 26%);
+    cursor: pointer;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+
+.delete_todo:hover {
+    background: linear-gradient(135deg, #f65d67 0%, #212148 100%);
+}

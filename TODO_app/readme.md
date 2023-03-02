@@ -1,0 +1,1 @@
+This todo app is aesthetically designed and can do some basic operations like add and delete tasks, if you want to see some cool and beautifully designed interface with some basic functionality you can check this out.
