@@ -1,0 +1,1 @@
+This repository contains all the projects I personally do for my practice.
